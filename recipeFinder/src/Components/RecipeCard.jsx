@@ -13,9 +13,11 @@ const RecipeCard = ({ recipe }) => {
         <h2 className="text-xl font-semibold text-purple-700 mb-2">
           {recipe.strMeal}
         </h2>
+
         <p className="text-gray-600 mb-1">
           <strong>Category:</strong> {recipe.strCategory}
         </p>
+
         <p className="text-gray-600 mb-3">
           <strong>Area:</strong> {recipe.strArea}
         </p>

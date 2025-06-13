@@ -1,3 +1,4 @@
+// App.jsx
 import React, { useState } from "react";
 import SearchBar from "./Components/SearchBar";
 import RecipeList from "./Components/RecipeList";
@@ -30,8 +31,11 @@ const App = () => {
     <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
       <h1 className="text-4xl font-bold text-purple-700 mb-6">Recipe Finder 🍽️</h1>
       <SearchBar query={query} setQuery={setQuery} onSearch={handleSearch} />
+
       {loading && <p>Loading...</p>}
       {error && <p className="text-red-500">{error}</p>}
+
+      {/* ✅ Pass recipes to RecipeList */}
       <RecipeList recipes={recipes} />
     </div>
   );
